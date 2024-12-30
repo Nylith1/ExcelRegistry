@@ -1,0 +1,59 @@
+# Ignore environment variable files
+.env
+.env.*
+
+# Ignore appsettings for development
+appsettings.Development.json
+
+# Ignore build and output directories
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.swp
+*.swo
+
+# Ignore dependency directories
+node_modules/
+vendor/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
+logs/
+*.tlog
+
+# Ignore OS specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Ignore archives
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.old
+
+# Ignore coverage reports
+coverage/
+*.lcov
+
+# Ignore debug and crash files
+*.pid
+*.stackdump
+
+# Ignore database files
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
