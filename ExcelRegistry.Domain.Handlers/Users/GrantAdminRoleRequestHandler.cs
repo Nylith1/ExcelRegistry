@@ -1,5 +1,5 @@
 ﻿using ExcelRegistry.Domain.Handlers.Repositories.User;
-using ExcelRegistry.Domain.Users;
+using ExcelRegistry.Domain.Users.Entities;
 using ExcelRegistry.Shared;
 using MediatR;
 

@@ -1,4 +1,4 @@
-﻿namespace ExcelRegistry.Domain.Regents;
+﻿namespace ExcelRegistry.Domain.Regents.ValueObjects;
 
 public class RegentDate : ValueObject
 {

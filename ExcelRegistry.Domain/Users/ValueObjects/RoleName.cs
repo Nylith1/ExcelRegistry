@@ -1,6 +1,6 @@
 ﻿using ExcelRegistry.Shared.Helpers.Exceptions;
 
-namespace ExcelRegistry.Domain.Users;
+namespace ExcelRegistry.Domain.Users.ValueObjects;
 
 public class RoleName : ValueObject
 {

@@ -1,6 +1,6 @@
 ﻿using ExcelRegistry.Shared.Helpers.Exceptions;
 
-namespace ExcelRegistry.Domain.Regents;
+namespace ExcelRegistry.Domain.Regents.ValueObjects;
 
 public class RegentDateOfManufacture : ValueObject
 {

@@ -1,5 +1,5 @@
 ﻿using ExcelRegistry.Domain.Handlers.Repositories.Regent;
-using ExcelRegistry.Domain.Regents;
+using ExcelRegistry.Domain.Regents.Entities;
 using ExcelRegistry.Shared.Dtos.GoogleSheets;
 using MediatR;
 

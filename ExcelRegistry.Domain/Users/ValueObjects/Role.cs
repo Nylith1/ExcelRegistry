@@ -1,7 +1,7 @@
 ﻿using ExcelRegistry.Domain.Common;
 using ExcelRegistry.Shared.Dtos.CosmosDb;
 
-namespace ExcelRegistry.Domain.Users;
+namespace ExcelRegistry.Domain.Users.ValueObjects;
 
 public class Role
 {

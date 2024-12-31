@@ -1,6 +1,6 @@
 ﻿using ExcelRegistry.Domain.Handlers.Repositories.User;
 using ExcelRegistry.Domain.Handlers.Services.Interfaces;
-using ExcelRegistry.Domain.Users;
+using ExcelRegistry.Domain.Users.Entities;
 using ExcelRegistry.Shared.Dtos.CosmosDb;
 using ExcelRegistry.Shared.Helpers.Exceptions;
 using ExcelRegistry.Shared.Options;

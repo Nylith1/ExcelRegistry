@@ -1,8 +1,9 @@
 ﻿using ExcelRegistry.Domain.Common;
+using ExcelRegistry.Domain.Regents.ValueObjects;
 using ExcelRegistry.Shared.Dtos.GoogleSheets;
 using ExcelRegistry.Shared.Helpers.Exceptions;
 
-namespace ExcelRegistry.Domain.Regents;
+namespace ExcelRegistry.Domain.Regents.Entities;
 
 public class Regent
 {

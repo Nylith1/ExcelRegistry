@@ -1,7 +1,7 @@
 ﻿using ExcelRegistry.Shared.Helpers.Exceptions;
 using System.Text.RegularExpressions;
 
-namespace ExcelRegistry.Domain.Users;
+namespace ExcelRegistry.Domain.Users.ValueObjects;
 
 public class UserEmail : ValueObject
 {

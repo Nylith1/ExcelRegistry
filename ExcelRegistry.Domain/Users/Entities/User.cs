@@ -1,8 +1,9 @@
 ﻿using ExcelRegistry.Domain.Common;
+using ExcelRegistry.Domain.Users.ValueObjects;
 using ExcelRegistry.Shared.Dtos.CosmosDb;
 using ExcelRegistry.Shared.Helpers.Exceptions;
 
-namespace ExcelRegistry.Domain.Users;
+namespace ExcelRegistry.Domain.Users.Entities;
 
 public class User
 {
