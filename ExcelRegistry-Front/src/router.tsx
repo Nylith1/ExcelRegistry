@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import DashboardPage from "./pages/DashboardPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import WelcomePage from "./pages/WelcomePage";
 import AdminToolkitPage from "./pages/AdminToolkitPage";
+import RegentsPage from "./pages/RegentsPage";
 
 export const router = createBrowserRouter([
   {
@@ -12,10 +12,10 @@ export const router = createBrowserRouter([
         element: <WelcomePage />,
       },
       {
-        path: "/dashboard",
+        path: "/regents",
         element: (
           <ProtectedRoute requiredRole="User">
-            <DashboardPage />
+            <RegentsPage />
           </ProtectedRoute>
         ),
       },

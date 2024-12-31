@@ -20,13 +20,13 @@ const ProtectedRoute = ({ children, requiredRole }: any) => {
     }
   }, []);
 
-  if (user === null) {
-    return <div>Loading...</div>;
-  }
-
   const token = localStorage.getItem("jwtToken");
   if (!token) {
     return <Navigate to="/" replace />;
+  }
+
+  if (user === null) {
+    return <div>Loading...</div>;
   }
 
   const authorizedUser = user.userRoleNames.includes(requiredRole);

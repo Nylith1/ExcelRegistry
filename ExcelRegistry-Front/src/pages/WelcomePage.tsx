@@ -11,7 +11,7 @@ function WelcomePage() {
         .then((response) => {
           localStorage.setItem("user", JSON.stringify(response.data));
           localStorage.setItem("jwtToken", response.data.jwtToken);
-          window.location.href = "/dashboard";
+          window.location.href = "/regents";
         });
     } catch (error) {
       alert(

@@ -9,7 +9,7 @@ import { RegentDto, UserDto } from "../assets/Models";
 import { LoadinBackdrop } from "../components/LoadinBackdrop";
 import { TimeZoneOffset } from "../Helpers/TimeZoneOffset";
 
-function DashboardPage() {
+function RegentsPage() {
   const [shouldFetch, setShouldFetch] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [regentsData, setRegentsData] = useState<RegentDto[]>([]);
@@ -186,7 +186,6 @@ function DashboardPage() {
   const handleEditSaveClick = async () => {
     setIsLoading(true);
     const regent = regentsData.find((x) => x.id === editingRowId);
-    console.log(regent);
     if (regent != undefined) {
       await axios
         .patch(
@@ -412,4 +411,4 @@ function DashboardPage() {
   );
 }
 
-export default DashboardPage;
+export default RegentsPage;
