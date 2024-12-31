@@ -11,7 +11,7 @@ import { TimeZoneOffset } from "../Helpers/TimeZoneOffset";
 
 function RegentsPage() {
   const [shouldFetch, setShouldFetch] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [regentsData, setRegentsData] = useState<RegentDto[]>([]);
 
   const [editingRowId, setEditingRowId] = useState(null);
@@ -44,9 +44,7 @@ function RegentsPage() {
       }
 
       if (shouldFetch) {
-        setIsLoading(true);
         await fetchRegents();
-        setIsLoading(false);
       }
     };
 
@@ -149,8 +147,6 @@ function RegentsPage() {
       })
       .then((response) => {
         setRegentsData(response.data);
-      })
-      .finally(() => {
         setShouldFetch(false);
         setIsLoading(false);
       })
