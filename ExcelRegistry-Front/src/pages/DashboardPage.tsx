@@ -334,15 +334,26 @@ function DashboardPage() {
                   </td>
                   <td className="px-6 py-4">{regent.user}</td>
                   <td className="px-6 py-4">
-                    <button
-                      onClick={() => handleEditClick(regent.id)}
-                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                    >
-                      <CountdownTimer
-                        text="Koreguoti:"
-                        countdownSeconds={getCountdownSeconds(regent.date)}
-                      ></CountdownTimer>
-                    </button>
+                    {user?.userRoleNames.some((role) => role === "Admin") ? (
+                      <div className="flex flex-col items-center w-40 space-y-2">
+                        <button
+                          onClick={() => handleEditClick(regent.id)}
+                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        >
+                          Koreguoti
+                        </button>
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => handleEditClick(regent.id)}
+                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                      >
+                        <CountdownTimer
+                          text="Koreguoti:"
+                          countdownSeconds={getCountdownSeconds(regent.date)}
+                        ></CountdownTimer>
+                      </button>
+                    )}
                   </td>
                 </tr>
               )
