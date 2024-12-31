@@ -35,7 +35,7 @@ function MainLayout({ children }: ReactNodeProps) {
       <nav className="border-gray-200 dark:bg-gray-900 bg-blue-100">
         <div className="flex flex-wrap items-center justify-between mx-auto p-4">
           <a
-            href="/dashboard"
+            href="/regents"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
@@ -85,7 +85,7 @@ function MainLayout({ children }: ReactNodeProps) {
                   <li>
                     <a
                       onClick={handleSettingsClick}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      className="block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                     >
                       Administratoriaus nustatymai
                     </a>
@@ -94,7 +94,7 @@ function MainLayout({ children }: ReactNodeProps) {
                 <li>
                   <a
                     onClick={handleLogout}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    className="block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                   >
                     Atsijungti
                   </a>

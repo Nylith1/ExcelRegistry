@@ -210,7 +210,7 @@ function AdminToolkitPage() {
                     <ul>
                       <a
                         onClick={() => handleRemoveUserClick(user.id)}
-                        className="block font-medium text-red-600 hover:underline dark:text-red-500"
+                        className="block cursor-pointer font-medium text-red-600 hover:underline dark:text-red-500"
                       >
                         Naikinti
                       </a>
@@ -220,7 +220,7 @@ function AdminToolkitPage() {
                             ? handleRevokeAdminRoleClick(user.id)
                             : handleGrantAdminRoleClick(user.id)
                         }
-                        className="block font-medium text-blue-600 hover:underline dark:text-blue-500"
+                        className="block cursor-pointer font-medium text-blue-600 hover:underline dark:text-blue-500"
                       >
                         {isAdmin(user.userRoleNames)
                           ? "Atimti administratoriaus teises"
@@ -257,7 +257,7 @@ function AdminToolkitPage() {
               <Table.Cell>
                 <a
                   onClick={handleAddUserClick}
-                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                  className="font-medium cursor-pointer text-blue-600 hover:underline dark:text-blue-500"
                 >
                   Pridėti
                 </a>

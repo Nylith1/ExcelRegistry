@@ -333,7 +333,7 @@ function RegentsPage() {
                       <div className="flex flex-col items-center w-40 space-y-2">
                         <button
                           onClick={() => handleEditClick(regent.id)}
-                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                          className="font-medium cursor-pointer text-blue-600 dark:text-blue-500 hover:underline"
                         >
                           Koreguoti
                         </button>
@@ -341,7 +341,7 @@ function RegentsPage() {
                     ) : (
                       <button
                         onClick={() => handleEditClick(regent.id)}
-                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        className="font-medium cursor-pointer text-blue-600 dark:text-blue-500 hover:underline"
                       >
                         <CountdownTimer
                           text="Koreguoti:"
@@ -393,7 +393,7 @@ function RegentsPage() {
                 <div className="flex flex-col items-center w-40 space-y-2">
                   <button
                     onClick={() => handleSaveClick()}
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    className="font-medium cursor-pointer text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Saugoti
                   </button>
