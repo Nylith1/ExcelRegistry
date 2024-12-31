@@ -19,6 +19,7 @@ public class UserEmail : ValueObject
 
     public static UserEmail Create(string email)
     {
+        email = email.ToLower();
         Validate(email);
         return new UserEmail(email);
     }

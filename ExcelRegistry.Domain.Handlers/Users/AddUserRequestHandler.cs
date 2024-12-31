@@ -31,7 +31,7 @@ public class AddUserRequestHandler(IUserRepository userRepository, IRoleReposito
     private async Task ValidateUserDuplication(AddUserRequest request, CancellationToken cancellationToken)
     {
         var usersData = await userRepository.GetUsersAsync(cancellationToken);
-        if (usersData.Any(x => x.Email == request.Email))
+        if (usersData.Any(x => x.Email.ToLower() == request.Email.ToLower()))
         {
             throw new DomainException("User email already exists.");
         }

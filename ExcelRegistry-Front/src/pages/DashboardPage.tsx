@@ -111,7 +111,7 @@ function DashboardPage() {
     const id = crypto.randomUUID().toString();
     await axios
       .post(
-        `${BASE_URL}RegentsRegister/AddRegisteredRegent`,
+        `${BASE_URL}RegentsRegister/AddRegent`,
         {
           id: id,
           date: new Date().toISOString(),
@@ -142,7 +142,7 @@ function DashboardPage() {
   const fetchRegents = async () => {
     setIsLoading(true);
     axios
-      .get(`${BASE_URL}RegentsRegister/GetRegisteredRegents`, {
+      .get(`${BASE_URL}RegentsRegister/GetRegents`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
