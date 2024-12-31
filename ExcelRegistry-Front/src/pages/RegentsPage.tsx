@@ -230,39 +230,51 @@ function RegentsPage() {
       {isLoading && <LoadinBackdrop />}
 
       <div className="overflow-auto h-full">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <table className="w-full table-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-3 py-3 w-5">
                 Eilės numeris
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-3 py-3 w-48">
+                Tirpalo sudedamosios dalys
+              </th>
+              <th scope="col" className="px-3 py-3 w-5">
+                Savybės
+              </th>
+              <th scope="col" className="px-3 py-3 w-20">
+                Masė, g tūris mL
+              </th>
+              <th scope="col" className="px-3 py-3 w-40">
                 Data
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-3 py-3">
                 Ruošiamas tirpalas
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-3 py-3 w-60">
                 Pagaminimo data
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-3 py-3 w-60">
                 Galiojimo data
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-3 py-3 w-60">
                 Įrašą atlikęs asmuo
               </th>
-              <th scope="col" className="px-6 py-3"></th>
+              <th scope="col" className="px-3 py-3 w-40"></th>
             </tr>
           </thead>
           <tbody>
             {regentsData.map((regent) =>
               editingRowId === regent.id ? (
                 <tr key={regent.id} className="bg-white dark:bg-gray-800">
-                  <td className="px-6 py-4">{regent.indexNumber}</td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">{regent.indexNumber}</td>
+                  <td className="px-3 py-4">System Liquid Concentrate</td>
+                  <td className="px-3 py-4">Skystis</td>
+                  <td className="px-3 py-4">1000mL</td>
+                  <td className="px-3 py-4">
                     {format(new Date(regent.date), "yyyy-MM-dd HH:mm:ss")}
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">
                     <input
                       id="solution-being-prepared-edit"
                       type="text"
@@ -273,7 +285,7 @@ function RegentsPage() {
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg"
                     />
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">
                     <Datepicker
                       onChange={(date) => setEditingDateOfManufacture(date)}
                       value={editingDateOfManufacture}
@@ -283,7 +295,7 @@ function RegentsPage() {
                       id="date-of-manufacture-edit"
                     />
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">
                     <Datepicker
                       onChange={(date) => setEditingExpireDate(date)}
                       value={editingExpireDate}
@@ -293,8 +305,8 @@ function RegentsPage() {
                       id="expire-date-edit"
                     />
                   </td>
-                  <td className="px-6 py-4">{regent.user}</td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">{regent.user}</td>
+                  <td className="px-3 py-4">
                     <div className="flex flex-col items-center w-40 space-y-2">
                       <button
                         onClick={handleEditSaveClick}
@@ -316,19 +328,34 @@ function RegentsPage() {
                   key={regent.id}
                   className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                 >
-                  <td className="px-6 py-4">{regent.indexNumber}</td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">{regent.indexNumber}</td>
+                  <td className="px-3 py-4">
+                    <div>
+                      System Liquid Concentrate
+                      <hr className="my-2 border-gray-300" />
+                      II tipo laboratorinis vanduo
+                    </div>
+                  </td>
+                  <td className="px-3 py-4">Skystis</td>
+                  <td className="px-3 py-4">
+                    <div>
+                      1000 mL
+                      <hr className="my-2 border-gray-300" />
+                      9000 mL
+                    </div>
+                  </td>
+                  <td className="px-3 py-4">
                     {format(new Date(regent.date), "yyyy-MM-dd HH:mm:ss")}
                   </td>
-                  <td className="px-6 py-4">{regent.solutionBeingPrepared}</td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">{regent.solutionBeingPrepared}</td>
+                  <td className="px-3 py-4">
                     {format(new Date(regent.dateOfManufacture), "yyyy-MM-dd")}
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">
                     {format(new Date(regent.expireDate), "yyyy-MM-dd")}
                   </td>
-                  <td className="px-6 py-4">{regent.user}</td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 py-4">{regent.user}</td>
+                  <td className="px-3 py-4">
                     {user?.userRoleNames.some((role) => role === "Admin") ? (
                       <div className="flex flex-col items-center w-40 space-y-2">
                         <button
@@ -353,22 +380,37 @@ function RegentsPage() {
                 </tr>
               )
             )}
-            <tr className="bg-white dark:bg-gray-800 h-[50vh] align-top max-h-96 overflow-y-auto">
-              <td className="px-6 py-4">{placeholderIndex}</td>
-              <td className="px-6 py-4">
+            <tr className="bg-white dark:bg-gray-800 align-center overflow-y-auto">
+              <td className="px-3 py-4">{placeholderIndex}</td>
+              <td className="px-3 py-4">
+                <div>
+                  System Liquid Concentrate
+                  <hr className="my-2 border-gray-300" />
+                  II tipo laboratorinis vanduo
+                </div>
+              </td>
+              <td className="px-3 py-4">Skystis</td>
+              <td className="px-3 py-4">
+                <div>
+                  1000 mL
+                  <hr className="my-2 border-gray-300" />
+                  9000 mL
+                </div>
+              </td>
+              <td className="px-3 py-4">
                 {format(new Date(placeholderDate), "yyyy-MM-dd HH:mm:ss")}
               </td>
-              <td className="px-6 py-4">
+              <td className="px-3 py-4">
                 <input
                   type="text"
                   id="solution-being-prepared"
                   onChange={(e) => setSolutionBeingPrepared(e.target.value)}
                   placeholder="Ruošiamas tirpalas"
                   value={solutionBeingPrepared}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 ></input>
               </td>
-              <td className="px-6 py-4">
+              <td className="px-3 py-4">
                 <Datepicker
                   onChange={(date) => setDateOfManufacture(date || new Date())}
                   value={dateOfManufacture}
@@ -378,7 +420,7 @@ function RegentsPage() {
                   id="date-of-manufacture"
                 />
               </td>
-              <td className="px-6 py-4">
+              <td className="px-3 py-4">
                 <Datepicker
                   onChange={(date) => setExpireDate(date || new Date())}
                   value={expireDate}
@@ -388,8 +430,8 @@ function RegentsPage() {
                   id="expire-date"
                 />
               </td>
-              <td className="px-6 py-4">{palceholderUserName}</td>
-              <td className="px-6 py-4 items">
+              <td className="px-3 py-4">{palceholderUserName}</td>
+              <td className="px-3 py-4 items">
                 <div className="flex flex-col items-center w-40 space-y-2">
                   <button
                     onClick={() => handleSaveClick()}
@@ -400,6 +442,7 @@ function RegentsPage() {
                 </div>
               </td>
             </tr>
+            <div className="h-96"></div>
           </tbody>
         </table>
       </div>
