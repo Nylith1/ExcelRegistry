@@ -1,4 +1,4 @@
-﻿using ExcelRegistry.Access.CosmosDb.Repositories.Interfaces;
+﻿using ExcelRegistry.Domain.Handlers.Repositories.User;
 using ExcelRegistry.Domain.Handlers.Services.Interfaces;
 using ExcelRegistry.Domain.Users;
 using ExcelRegistry.Shared.Dtos.CosmosDb;

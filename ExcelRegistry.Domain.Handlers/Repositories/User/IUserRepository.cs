@@ -1,6 +1,6 @@
 ﻿using ExcelRegistry.Shared.Dtos.CosmosDb;
 
-namespace ExcelRegistry.Access.CosmosDb.Repositories.Interfaces;
+namespace ExcelRegistry.Domain.Handlers.Repositories.User;
 
 public interface IUserRepository
 {

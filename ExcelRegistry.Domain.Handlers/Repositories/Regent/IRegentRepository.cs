@@ -1,6 +1,6 @@
 ﻿using ExcelRegistry.Shared.Dtos.GoogleSheets;
 
-namespace ExcelRegistry.Access.GoogleSheets.Repositories.Interfaces;
+namespace ExcelRegistry.Domain.Handlers.Repositories.Regent;
 
 public interface IRegentRepository
 {

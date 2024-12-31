@@ -1,6 +1,6 @@
 ﻿using ExcelRegistry.Access.CosmosDb.Databases.Interfaces;
 using ExcelRegistry.Access.CosmosDb.Models.DataModels;
-using ExcelRegistry.Access.CosmosDb.Repositories.Interfaces;
+using ExcelRegistry.Domain.Handlers.Repositories.User;
 using ExcelRegistry.Shared;
 using ExcelRegistry.Shared.Dtos.CosmosDb;
 

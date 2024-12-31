@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExcelRegistry.Domain.Handlers\ExcelRegistry.Domain.Handlers.csproj" />
     <ProjectReference Include="..\ExcelRegistry.Shared\ExcelRegistry.Shared.csproj" />
   </ItemGroup>
 

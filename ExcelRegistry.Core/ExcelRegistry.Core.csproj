@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExcelRegistry.Access.CosmosDb\ExcelRegistry.Access.CosmosDb.csproj" />
     <ProjectReference Include="..\ExcelRegistry.Access.GoogleSheets\ExcelRegistry.Access.GoogleSheets.csproj" />
     <ProjectReference Include="..\ExcelRegistry.Domain.Handlers\ExcelRegistry.Domain.Handlers.csproj" />
   </ItemGroup>

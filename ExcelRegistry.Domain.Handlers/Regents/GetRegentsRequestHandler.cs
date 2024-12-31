@@ -1,4 +1,4 @@
-﻿using ExcelRegistry.Access.GoogleSheets.Repositories.Interfaces;
+﻿using ExcelRegistry.Domain.Handlers.Repositories.Regent;
 using ExcelRegistry.Shared.Dtos.GoogleSheets;
 using MediatR;
 

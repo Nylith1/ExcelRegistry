@@ -1,5 +1,5 @@
-﻿using ExcelRegistry.Access.CosmosDb.Repositories.Interfaces;
-using ExcelRegistry.Domain.Common;
+﻿using ExcelRegistry.Domain.Common;
+using ExcelRegistry.Domain.Handlers.Repositories.User;
 using ExcelRegistry.Domain.Users;
 using ExcelRegistry.Shared;
 using MediatR;

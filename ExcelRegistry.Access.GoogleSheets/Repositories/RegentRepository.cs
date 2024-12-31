@@ -1,6 +1,6 @@
 ﻿using ExcelRegistry.Access.GoogleSheets.Models;
-using ExcelRegistry.Access.GoogleSheets.Repositories.Interfaces;
 using ExcelRegistry.Access.GoogleSheets.Services.Interfaces;
+using ExcelRegistry.Domain.Handlers.Repositories.Regent;
 using ExcelRegistry.Shared;
 using ExcelRegistry.Shared.Dtos.GoogleSheets;
 using Newtonsoft.Json;
