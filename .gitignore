@@ -21,6 +21,7 @@ vendor/
 # Ignore IDE specific files
 .vscode/
 .idea/
+.vs/
 
 # Ignore logs
 *.log
